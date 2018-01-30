@@ -68,4 +68,17 @@
      # #5
      return nil
    end
+
+   def iterative_search(name)
+      index = 0
+      entries.each do |entry|
+         if entries[index].name == name
+            return entries[index]
+         elsif index < entries.length - 1
+            index += 1
+         else
+            return nil
+         end
+      end
+   end
  end
